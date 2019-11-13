@@ -1,0 +1,27 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <PreferenceCategory android:title="Notification">
+
+        <EditTextPreference
+            app:key="@string/preference_key_display_name"
+            app:title="Display Name"
+            app:useSimpleSummaryProvider="true"/>
+
+        <SwitchPreferenceCompat
+            app:key="@string/preference_key_tts_enabled"
+            app:title="Speak Bot Messages"
+            app:summary="Speak out FUTM Bot messages as they come are received"/>
+
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="System Settings">
+
+        <Preference
+            app:key="@string/preference_key_tts_settings"
+            app:title="Text-to-Speech"
+            app:summary="Text-to-Speech Settings"/>
+
+    </PreferenceCategory>
+
+</PreferenceScreen>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/colorTransparent"
+    android:padding="10dp"
+    android:gravity="center">
+
+    <TextView
+        android:id="@+id/txt_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:background="@drawable/background_stroke_curve_light_blue"
+        android:textColor="@color/colorDarkAsh"
+        android:padding="4dp"
+        android:textSize="14sp"
+        android:minWidth="100dp"
+        tools:text="14 July 2019" />
+
+</LinearLayout>

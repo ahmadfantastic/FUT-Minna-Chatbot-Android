@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:background="@color/colorWhite"
+    android:padding="16dp"
+    tools:context=".fragment.CodeVerificationFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:background="@color/colorWhite"
+        tools:context=".fragment.CodeVerificationFragment">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="136dp"
+            android:layout_marginBottom="32dp"
+            android:src="@drawable/code_verification"
+            android:contentDescription="@string/description_code" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:textSize="14sp"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textColor="@color/colorBlack"
+            android:fontFamily="serif-monospace"
+            android:text="@string/prompt_code_verification_guide"
+            android:layout_marginBottom="16dp"/>
+
+        <EditText
+            android:id="@+id/edt_code"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:hint="@string/hint_code"
+            android:padding="8dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:inputType="number"
+            android:maxLines="1"
+            android:maxLength="5"
+            android:gravity="center"
+            android:textColor="@color/colorBlack"
+            android:fontFamily="casual"
+            android:layout_marginBottom="16dp"
+            tools:ignore="Autofill" />
+
+        <Button
+            android:id="@+id/btn_verify"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:padding="4dp"
+            android:backgroundTint="@color/colorAccent"
+            android:textColor="@color/colorPrimary"
+            android:text="@string/prompt_verify"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="8dp"
+            android:padding="8dp"
+            android:baselineAligned="false">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="start"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/txt_phone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp"
+                    android:textColor="@color/colorBlack"
+                    android:gravity="center"
+                    android:textStyle="italic"
+                    android:fontFamily="sans-serif-condensed-medium"
+                    tools:text="08038298838"/>
+
+                <Button
+                    android:id="@+id/btn_change"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorTransparent"
+                    android:textColor="@color/colorAccent"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/prompt_change"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/txt_timer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp"
+                    android:fontFamily="casual"
+                    android:gravity="center"
+                    tools:text="01m 7s"/>
+
+                <Button
+                    android:id="@+id/btn_resend"
+                    android:enabled="false"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorTransparent"
+                    android:textColor="@color/colorLightBlue"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/prompt_resend"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

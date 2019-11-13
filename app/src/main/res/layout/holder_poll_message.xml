@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/colorTransparent"
+    android:paddingTop="10dp"
+    android:paddingBottom="0dp"
+    android:paddingStart="15dp"
+    android:paddingEnd="60dp"
+    android:layout_margin="1dp"
+    android:clipToPadding="false">
+
+    <ImageView
+        android:id="@+id/img_contributor"
+        android:layout_alignParentStart="true"
+        android:scaleType="centerCrop"
+        android:src="@drawable/fut_chatbot"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:contentDescription="@string/description_contributor_image" />
+
+    <TextView
+        android:id="@+id/txt_contributor_name"
+        android:textColor="@color/colorBlack"
+        android:layout_marginStart="8dp"
+        android:layout_toEndOf="@+id/img_contributor"
+        android:layout_alignTop="@+id/img_contributor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingBottom="4dp"
+        android:text="@string/prompt_fut_bot"/>
+
+    <TextView
+        android:id="@+id/txt_message_time"
+        android:layout_marginStart="8dp"
+        android:layout_below="@id/view_body"
+        android:layout_alignEnd="@id/view_body"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:textColor="@color/colorAsh"
+        android:paddingBottom="4dp"
+        tools:text="12:45"/>
+
+    <TextView
+        android:id="@+id/txt_poll_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txt_contributor_name"
+        android:layout_toEndOf="@+id/img_contributor"
+        android:background="@drawable/text_purple_background_2"
+        android:paddingTop="4dp"
+        android:paddingBottom="4dp"
+        android:textColor="@color/colorWhite"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:elevation="2dp"
+        android:textSize="18sp"
+        android:minWidth="100dp"
+        tools:text="CIT555 Test Date" />
+
+    <LinearLayout
+        android:id="@+id/view_body"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@+id/txt_poll_title"
+        android:layout_toEndOf="@+id/img_contributor"
+        android:background="@drawable/text_milk_background"
+        android:paddingTop="4dp"
+        android:paddingBottom="4dp"
+        android:textColor="@color/colorDarkAsh"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:elevation="2dp"
+        android:textSize="14sp"
+        android:minWidth="100dp">
+
+        <TextView
+            android:id="@+id/txt_poll_body"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorDarkAsh"
+            android:textSize="14sp"
+            tools:text="What is your opinion on the date we should write CIT55 CA Test" />
+
+        <com.fut.chatbot.util.MyListView
+            android:id="@+id/list_view_items"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:divider="@null"
+            android:dividerHeight="0dp"/>
+    </LinearLayout>
+
+</RelativeLayout>

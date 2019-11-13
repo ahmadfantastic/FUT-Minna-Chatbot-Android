@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/transparent">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minWidth="100dp"
+        android:layout_margin="2dp"
+        android:padding="2dp"
+        android:elevation="1dp"
+        android:orientation="horizontal"
+        android:id="@+id/view_item"
+        android:background="@drawable/text_background_selected">
+
+
+    <TextView
+        android:id="@+id/txt_poll_item_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_gravity="center_vertical"
+        tools:text="12/08/2019"
+        android:textSize="16sp"
+        android:fontFamily="monospace"
+        android:layout_margin="4dp"
+        android:textColor="@color/colorDarkAsh"/>
+
+    <ImageView
+        android:id="@+id/img_voted"
+        android:src="@drawable/ic_vote"
+        android:scaleType="centerInside"
+        android:layout_gravity="center"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:contentDescription="@string/description_selected_image" />
+
+    </LinearLayout>
+
+</RelativeLayout>
